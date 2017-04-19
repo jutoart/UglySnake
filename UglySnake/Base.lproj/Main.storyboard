@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d0k-7L-p5G">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ugly Snake View Controller-->
+        <scene sceneID="7a8-V3-8ju">
+            <objects>
+                <viewController id="d0k-7L-p5G" customClass="UglySnakeViewController" customModule="UglySnake" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ta1-l8-Zqg"/>
+                        <viewControllerLayoutGuide type="bottom" id="57b-Ng-ogR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RaO-Pg-smx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AaG-Oa-T4T">
+                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKh-3D-RMm">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="12.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxY-SM-LMH" customClass="UglySnakeView" customModule="UglySnake" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="12.5" width="343" height="618.5"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="57b-Ng-ogR" firstAttribute="top" secondItem="AaG-Oa-T4T" secondAttribute="bottom" constant="8" symbolic="YES" id="3iC-9l-vXX"/>
+                            <constraint firstItem="AaG-Oa-T4T" firstAttribute="top" secondItem="ta1-l8-Zqg" secondAttribute="bottom" constant="8" symbolic="YES" id="Jh4-jK-5ht"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AaG-Oa-T4T" secondAttribute="trailing" id="YkL-Fu-tEs"/>
+                            <constraint firstItem="AaG-Oa-T4T" firstAttribute="leading" secondItem="RaO-Pg-smx" secondAttribute="leadingMargin" id="qn4-X2-LIV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="dxY-SM-LMH" id="M2N-T5-lrP"/>
+                        <outlet property="scoreLabel" destination="uKh-3D-RMm" id="Ma5-xT-QCF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkh-LU-OY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="-11.244377811094454"/>
+        </scene>
+    </scenes>
+</document>
